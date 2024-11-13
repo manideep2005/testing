@@ -4,7 +4,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    fetch('https://testing-sage-gamma.vercel.app/', {  // <-- Specify full URL here
+    fetch('https://testing-sage-gamma.vercel.app/api/signup', {  // Correct URL for signup
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })
@@ -19,7 +19,7 @@ document.getElementById('signinForm').addEventListener('submit', function(e) {
     const email = document.getElementById('signinEmail').value;
     const password = document.getElementById('signinPassword').value;
 
-    fetch('https://testing-sage-gamma.vercel.app/', {  // <-- Specify full URL here
+    fetch('https://testing-sage-gamma.vercel.app/api/signin', {  // Correct URL for signin
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
