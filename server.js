@@ -70,6 +70,7 @@ app.post('/api/signin', (req, res) => {
         });
     });
 });
+const token = jwt.sign({ userId: results[0].id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
 // Start the server
 app.listen(3000, () => {
